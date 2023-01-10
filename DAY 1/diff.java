@@ -46,6 +46,7 @@ public static void main(String[] args) throws Exception {
     	if (array2[j] + c >= array1V) {
     		d = (array2[j] + c) - array1V;
     		c = 0; 
+    		
     	}else{
     		d = (array2[j] + c + 10) - array1V;
     		c = -1;
@@ -56,10 +57,19 @@ public static void main(String[] args) throws Exception {
     	k--;
     }
 
-    for (int a = 0;a<diff.length ;a++ ) {
-    	System.out.print(diff[a]);
+    int indx = 0;
+
+    while(indx < diff.length){
+    	if (diff[indx]!=0) {
+    		break;
+    	}else{
+    		indx++;
+    	}
     }
-    	System.out.println();
+
+    for (int a = indx;a<diff.length ;a++ ) {
+    	System.out.println(diff[a]);
+    }
 
  }
 
