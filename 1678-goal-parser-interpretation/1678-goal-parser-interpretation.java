@@ -2,22 +2,9 @@ import java.util.*;
 
 class Solution {
     public String interpret(String command) {
-        StringBuilder sb = new StringBuilder();
+        String str1 = command.replace("()", "o");
+        String str2 = str1.replace("(al)", "al");
+        return str2;
         
-        for (int i = 0; i < command.length(); i++) {
-            if (command.charAt(i) == 'G') {
-                sb.append('G');
-            } else if ((command.charAt(i) == '(') && (command.charAt(i + 1) == ')')) {
-                sb.append('o');
-                i++;
-            } else if ((command.charAt(i) == '(') && (command.charAt(i + 1) == 'a') && (command.charAt(i + 2) == 'l')
-                    && (command.charAt(i + 3) == ')')) {
-                sb.append('a');
-                sb.append('l');
-                i += 3;
-            }
-        }
-        
-        return sb.toString();
     }
 }
