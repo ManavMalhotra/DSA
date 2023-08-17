@@ -9,6 +9,7 @@ class Solution {
                 sb.append('G');
             } else if ((command.charAt(i) == '(') && (command.charAt(i + 1) == ')')) {
                 sb.append('o');
+                i++;
             } else if ((command.charAt(i) == '(') && (command.charAt(i + 1) == 'a') && (command.charAt(i + 2) == 'l')
                     && (command.charAt(i + 3) == ')')) {
                 sb.append('a');
